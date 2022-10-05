@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "BookView";
+}
+
+<h2>BookView</h2>
+
+
+
+<div class="col-lg-2">
+    <div class="form-group">
+        <select class="form-control" name="bookTypeId">
+            <option>Select a Type</option>
+            @foreach (var type in Model.Books)
+            {
+                <option value="@type.TypeID">@type.TypeName </option>
+            }
+
+        </select>
+    </div>
+</div>
+@using (Html.BeginForm("SearchBook", "Library", FormMethod.Post))
+{
+    <form>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" placeholder="Search Book Name" name="bookName" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <select class="form-control" name="authorId">
+                        <option>Select an Author</option>
+                        @foreach (var author in Model.Authors)
+                        {
+                            <option value="@author.AuthorID">@author.AuthorName @author.AuthorSurname</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <select class="form-control" name="bookTypeId">
+                        <option>Select a Type</option>
+                        @foreach (var type in Model.BookTypes)
+                        {
+                            <option value="@type.TypeID">@type.TypeName </option>
+                        }
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success form-control" />
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <a href="@Url.Action()" class="btn btn-danger form-control">Clear</a>
+                </div>
+            </div>
+
+        </div>
+
+    </form>

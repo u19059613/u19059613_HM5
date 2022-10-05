@@ -1,0 +1,2 @@
+C:\Users\27635\Desktop\School\2022\inf272\HW2022\HM5\u19059613_HW5\u19059613_HW5\obj\Debug\u19059613_HW5.csproj.AssemblyReference.cache
+C:\Users\27635\Desktop\School\2022\inf272\HW2022\HM5\u19059613_HW5\u19059613_HW5\obj\Debug\u19059613_HW5.csproj.CoreCompileInputs.cache
